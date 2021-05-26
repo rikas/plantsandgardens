@@ -1,0 +1,17 @@
+<h1>My gardens</h1>
+
+<% if notice.present? %>
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>
+<% end %>
+
+<%= link_to 'Create new garden', new_garden_path %>
+
+<ul>
+  <% @gardens.each do |garden| %>
+    <li>
+      <%= link_to garden.name, garden_path(garden) %>
+    </li>
+  <% end %>
+</ul>

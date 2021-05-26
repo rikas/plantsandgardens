@@ -1,0 +1,8 @@
+<h1>Create new garden</h1>
+
+<%= simple_form_for @garden do |f| %>
+  <%= f.input :name %>
+  <%= f.input :picture_url %>
+  <%= f.input :category, collection: Garden::CATEGORIES %>
+  <%= f.submit %>
+<% end %>
